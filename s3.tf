@@ -17,7 +17,9 @@ resource "aws_s3_bucket_policy" "mybucketpolicy" {
         Action = "s3:GetObject"
         Effect = "Allow"
         Resource = "arn:aws:s3:::${aws_s3_bucket.mybucket.bucket}/*"
-        Principal = "*"
+        Principal = {
+          AWS = "arn:aws:iam::040987169062:user/GeethaSasi"
+        }
       }
     ]
   })
