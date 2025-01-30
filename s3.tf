@@ -18,7 +18,7 @@ resource "aws_s3_bucket_policy" "mybucketpolicy" {
         Effect = "Allow"
         Resource = "arn:aws:s3:::${aws_s3_bucket.mybucket.bucket}/*"
         Principal = {
-          AWS = "arn:aws:iam::040987169062:user/GeethaSasi"
+          AWS = "arn:aws:iam::040987169062:user/devuser"
         }
       }
     ]
