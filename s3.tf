@@ -2,14 +2,9 @@ resource "aws_s3_bucket" "mybucket" {
   bucket = "sasikumartestbucket30012025"
 
   tags = {
-    Name = "sasikumar30012025"
+    Name = "sasikumarpublicbucket"
     Environment = "Dev"
   }
-}
-
-resource "aws_s3_bucket_acl" "mybucketacl" {
-  bucket = aws_s3_bucket.mybucket.id
-  acl = "public-read"
 }
 
 resource "aws_s3_bucket_policy" "mybucketpolicy" {
